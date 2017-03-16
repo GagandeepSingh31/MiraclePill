@@ -10,6 +10,23 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var miraclePillmg: UIImageView!
+    @IBOutlet weak var miraclePillLbl: UILabel!
+    @IBOutlet weak var priceLbl: UILabel!
+    @IBOutlet weak var dividor: UIView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var successImg: UIImageView!
+    @IBOutlet weak var buyNowBtn: UIButton!
+    @IBOutlet weak var zipCodeTxtField: UITextField!
+    @IBOutlet weak var zipCodeLbl: UILabel!
+    @IBOutlet weak var countryTxtField: UITextField!
+    @IBOutlet weak var countryLbl: UILabel!
+    @IBOutlet weak var stateLbl: UILabel!
+    @IBOutlet weak var cityTxtFiled: UITextField!
+    @IBOutlet weak var cityLbl: UILabel!
+    @IBOutlet weak var streetTxtFiled: UITextField!
+    @IBOutlet weak var streetLbl: UILabel!
+    @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     
@@ -34,6 +51,36 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func stateBtnPressed(_ sender: Any) {
         
         statePicker.isHidden = false
+        countryLbl.isHidden = true
+        countryTxtField.isHidden = true
+        zipCodeLbl.isHidden = true
+        zipCodeTxtField.isHidden = true
+        buyNowBtn.isHidden = true
+        
+        
+    }
+    
+    
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        miraclePillmg.isHidden = true
+        miraclePillLbl.isHidden = true
+        priceLbl.isHidden = true
+        dividor.isHidden = true
+        nameLbl.isHidden = true
+        nameTxtField.isHidden = true
+        streetLbl.isHidden = true
+        streetTxtFiled.isHidden = true
+        cityLbl.isHidden = true
+        cityTxtFiled.isHidden = true
+        stateLbl.isHidden = true
+        statePickerBtn.isHidden = true
+        statePicker.isHidden = true
+        countryLbl.isHidden = true
+        countryTxtField.isHidden = true
+        zipCodeLbl.isHidden = true
+        zipCodeTxtField.isHidden = true
+        buyNowBtn.isHidden = true
+        successImg.isHidden = false
         
     }
     
@@ -53,6 +100,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         statePickerBtn.setTitle(states[row], for: UIControlState.normal)
         statePicker.isHidden = true
+        countryLbl.isHidden = false
+        countryTxtField.isHidden = false
+        zipCodeLbl.isHidden = false
+        zipCodeTxtField.isHidden = false
+        buyNowBtn.isHidden = false
+        
     }
     
 }
